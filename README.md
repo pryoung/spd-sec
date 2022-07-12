@@ -3,3 +3,9 @@ IDL software for processing membership information for the Solar Physics Divisio
 
 The tables of SPD member information used by this software are not publicly available. 
 
+The SPD member tables should be downloaded from a member's account in CSV format. They should be stored in a directory that is pointed to by the environment variable $SPD_MEMBERS. The tables should be named, e.g., spd_members_20220712.csv.
+
+The downloaded CSV files may contain DOS carriage return characters (^M). This can be fixed by running the Unix command:
+
+> tr '\r' ' ' < old_file.csv > new_file.csv
+
