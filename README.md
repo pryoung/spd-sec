@@ -12,3 +12,29 @@ The downloaded CSV files may contain DOS carriage return characters (^M). This c
 > tr '\r' ' ' < old_file.csv > new_file.csv
 ```
 
+## Examples
+
+Plot the number of members (or full members, 'F') as a function of time:
+
+```
+IDL> p=spd_plot_history()
+IDL> p=spd_plot_history(type='f')
+```
+
+Print the current numbers of members of each type:
+
+```
+IDL> spd_member_stats,/type
+```
+
+Print member breakdown by country:
+
+```
+IDL> spd_member_stats,/country
+```
+
+Print information about a member:
+
+```
+spd_find_member,'Young'
+```
